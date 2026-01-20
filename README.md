@@ -1,2 +1,2 @@
 # Mastermind
-Mastermind game repo for 11-ZOGWIDROUHUA group
+Mastermind game repo for ZOGWIDROUHUA-11 group
