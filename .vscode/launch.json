@@ -1,7 +1,26 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": []
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+        "name": "Run (macOS)",                      // this is the configuration for Mac
+        "preLaunchTask": "cmake-build",                     // before running the executable, build the project (cmake-build is in tasks.json)
+        "type": "cppdbg",                                   // specifies using MIengine, which is VS integrated debugger for C++
+        "request": "launch",                                // begin a new program for debugging
+        "program": "${command:cmake.launchTargetPath}",     // specifies the path to the build target
+        "cwd": "${command:cmake.launchTargetDirectory}",    // sets the directory where the build will happen
+        "console": "externalTerminal",                      // opens an external terminal for in/out with the program
+        "MIMode": "lldb",                                   // some low-level compiler stuff
+        "stopAtEntry": false                                // will immediately run the program once ready
+    },
+    {
+        "name": "Run (Windows)",                            // this is the configuration for windows
+        "preLaunchTask": "cmake-build",                     // same...
+        "type": "cppvsdbg",                                 // specifies using a windows-specific debugger which is better
+        "request": "launch",                                // same...
+        "program": "${command:cmake.launchTargetPath}",     // same...
+        "cwd": "${command:cmake.launchTargetDirectory}",    // same...
+        "console": "externalTerminal"                       // same...
+    }
+  ]
 }
