@@ -503,29 +503,29 @@ ContinuousSubmit/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+Assignment_1_A.o: Assignment_1_A.cpp.o
+.PHONY : Assignment_1_A.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mastermind.dir/build.make CMakeFiles/Mastermind.dir/main.cpp.o
-.PHONY : main.cpp.o
+Assignment_1_A.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mastermind.dir/build.make CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.o
+.PHONY : Assignment_1_A.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+Assignment_1_A.i: Assignment_1_A.cpp.i
+.PHONY : Assignment_1_A.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mastermind.dir/build.make CMakeFiles/Mastermind.dir/main.cpp.i
-.PHONY : main.cpp.i
+Assignment_1_A.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mastermind.dir/build.make CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.i
+.PHONY : Assignment_1_A.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+Assignment_1_A.s: Assignment_1_A.cpp.s
+.PHONY : Assignment_1_A.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mastermind.dir/build.make CMakeFiles/Mastermind.dir/main.cpp.s
-.PHONY : main.cpp.s
+Assignment_1_A.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mastermind.dir/build.make CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.s
+.PHONY : Assignment_1_A.cpp.s
 
 # Help Target
 help:
@@ -565,9 +565,9 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... Mastermind"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... Assignment_1_A.o"
+	@echo "... Assignment_1_A.i"
+	@echo "... Assignment_1_A.s"
 .PHONY : help
 
 

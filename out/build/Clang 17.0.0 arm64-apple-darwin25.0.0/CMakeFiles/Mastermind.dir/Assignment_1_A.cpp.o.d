@@ -1,5 +1,5 @@
-CMakeFiles/Mastermind.dir/main.cpp.o: \
-  /Users/milozogbi/Documents/Code/Mastermind/main.cpp \
+CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.o: \
+  /Users/milozogbi/Documents/Code/Mastermind/Assignment_1_A.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__config_site \

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Mastermind.dir/main.cpp.o"
-  "CMakeFiles/Mastermind.dir/main.cpp.o.d"
+  "CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.o"
+  "CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.o.d"
   "Mastermind"
   "Mastermind.pdb"
 )

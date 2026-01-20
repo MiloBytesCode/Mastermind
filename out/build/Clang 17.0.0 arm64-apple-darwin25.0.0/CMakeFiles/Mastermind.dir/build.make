@@ -72,28 +72,28 @@ include CMakeFiles/Mastermind.dir/flags.make
 CMakeFiles/Mastermind.dir/codegen:
 .PHONY : CMakeFiles/Mastermind.dir/codegen
 
-CMakeFiles/Mastermind.dir/main.cpp.o: CMakeFiles/Mastermind.dir/flags.make
-CMakeFiles/Mastermind.dir/main.cpp.o: /Users/milozogbi/Documents/Code/Mastermind/main.cpp
-CMakeFiles/Mastermind.dir/main.cpp.o: CMakeFiles/Mastermind.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/milozogbi/Documents/Code/Mastermind/out/build/Clang 17.0.0 arm64-apple-darwin25.0.0/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Mastermind.dir/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Mastermind.dir/main.cpp.o -MF CMakeFiles/Mastermind.dir/main.cpp.o.d -o CMakeFiles/Mastermind.dir/main.cpp.o -c /Users/milozogbi/Documents/Code/Mastermind/main.cpp
+CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.o: CMakeFiles/Mastermind.dir/flags.make
+CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.o: /Users/milozogbi/Documents/Code/Mastermind/Assignment_1_A.cpp
+CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.o: CMakeFiles/Mastermind.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/milozogbi/Documents/Code/Mastermind/out/build/Clang 17.0.0 arm64-apple-darwin25.0.0/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.o -MF CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.o.d -o CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.o -c /Users/milozogbi/Documents/Code/Mastermind/Assignment_1_A.cpp
 
-CMakeFiles/Mastermind.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Mastermind.dir/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/milozogbi/Documents/Code/Mastermind/main.cpp > CMakeFiles/Mastermind.dir/main.cpp.i
+CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/milozogbi/Documents/Code/Mastermind/Assignment_1_A.cpp > CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.i
 
-CMakeFiles/Mastermind.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Mastermind.dir/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/milozogbi/Documents/Code/Mastermind/main.cpp -o CMakeFiles/Mastermind.dir/main.cpp.s
+CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/milozogbi/Documents/Code/Mastermind/Assignment_1_A.cpp -o CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.s
 
 # Object files for target Mastermind
 Mastermind_OBJECTS = \
-"CMakeFiles/Mastermind.dir/main.cpp.o"
+"CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.o"
 
 # External object files for target Mastermind
 Mastermind_EXTERNAL_OBJECTS =
 
-Mastermind: CMakeFiles/Mastermind.dir/main.cpp.o
+Mastermind: CMakeFiles/Mastermind.dir/Assignment_1_A.cpp.o
 Mastermind: CMakeFiles/Mastermind.dir/build.make
 Mastermind: CMakeFiles/Mastermind.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/milozogbi/Documents/Code/Mastermind/out/build/Clang 17.0.0 arm64-apple-darwin25.0.0/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Mastermind"
