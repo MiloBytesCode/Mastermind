@@ -52,7 +52,7 @@ int main()
     correct = code_maker.checkCorrect(code_breaker);
     incorrect = code_maker.checkIncorrect(code_breaker);
 
-    cout << "Guess 1 [2,1,2,2,2] returns : ";
+    cout << "Guess 2 [2,1,2,2,2] returns : ";
     cout << "correct = " << correct << " | incorrect = " << incorrect << endl;
 
     // try guess 3
@@ -60,7 +60,7 @@ int main()
     correct = code_maker.checkCorrect(code_breaker);
     incorrect = code_maker.checkIncorrect(code_breaker);
 
-    cout << "Guess 1 [1,3,3,4,5] returns : ";
+    cout << "Guess 3 [1,3,3,4,5] returns : ";
     cout << "correct = " << correct << " | incorrect = " << incorrect << endl;
 
 

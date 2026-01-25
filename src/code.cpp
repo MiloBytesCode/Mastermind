@@ -8,6 +8,7 @@
 #include <string>
 using namespace std;
 
+#include <ctime> 
 
 Code::Code(int n, int m)
 // Constructor : inits data members
@@ -19,12 +20,15 @@ Code::Code(int n, int m)
 void Code::createSecretCode()
 // Generates a randomized secret code of length m with digits from 0 to n
 {
+    stored_code.clear(); //clear vector to prevent growth on multiple calls
+
     //set seed for random number generator
     srand(time(0)); 
 
     for(int i = 0; i < n; i++)
     {
         stored_code.push_back(rand() % (n + 1));
+        //stored_code.push_back(rand() % m); 
     }
 }
 
@@ -56,9 +60,41 @@ int Code::checkIncorrect(const Code& guess) const
     int semi_correct = 0;
     vector<int> guess_code = guess.getCode();
     vector<int> secret_code = stored_code;
+    
+    vector<bool> track_usedSecret(n, false); //track used digits in secret code
+    vector<bool> track_usedGuess(n, false); //track used digits in guess code
 
+    // first check all correct position matches
+    for(int i = 0; i < n; i++)
+    {
+        if(stored_code[i] == guess_code[i])
+        {
+            track_usedSecret[i] = true;
+            track_usedGuess[i] = true;
+        }
+    }
+    
+    for(int i = 0; i < n; i++)
+    {
+        if(track_usedGuess[i]) continue; // go on if already matched guess
 
-    for (int i = 0; i < n; i++)
+        for(int j = 0; j < n; j++)
+        {
+            if(track_usedSecret[j]) continue; //go onto next secret digit if already matched
+
+            // check for semi-correct match
+            if(guess_code[i] == stored_code[j])
+            {
+                semi_correct++;
+                track_usedSecret[j] = true;
+                track_usedGuess[i] = true;
+                break;
+                
+            }
+        }
+    }
+
+   /* for (int i = 0; i < n; i++)
     {
 
         if (guess_code[i] == secret_code[i])
@@ -82,6 +118,7 @@ int Code::checkIncorrect(const Code& guess) const
         }
 
     }
+        */
 
     return semi_correct;
 }
