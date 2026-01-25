@@ -5,9 +5,7 @@ Proiject #1 Mastermind, part a
 
 */
 
-
-#ifndef CODE_H
-#define CODE_H
+#pragma once
 
 #include <vector>
 #include <string>
@@ -37,8 +35,6 @@ class Code
 
 };
 
-
-#endif
 
 
 
