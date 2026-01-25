@@ -15,7 +15,16 @@ int main()
 
     // number of digits (n) and length (m) test case
     int n = 10, m = 5;  
-
+    /*
+    cout << "please enter max number possible and number of digits" << endl;
+    cout << "Max number: ";
+    cin >> n;
+    n += 1;
+    cout << "\nnumber of digits: ";
+    cin >> m;
+    //code for taking in codemaker params, commented out because the original guess codes need specific values of n and m
+        */
+    
     // init code object
     Code master_code(n, m);
     master_code.createSecretCode();
