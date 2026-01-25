@@ -10,7 +10,6 @@ Proiject #1 Mastermind, part a
 #include <vector>
 #include <string>
 
-
 class Code
 {   
     public:
@@ -21,24 +20,18 @@ class Code
         // class operations :
 
         void createSecretCode();
-        int checkCorrect() const;
-        int checkIncorrect() const;
-        std::string secretCode() const;
-
-        // public data members
-        std::vector<int> user_guess;
+        int checkCorrect(Code guess) const;
+        int checkIncorrect(Code guess) const;
+        std::string printCode() const;
+        void setCode(std::vector<int> new_code);
+        std::vector<int> getCode() const;
 
     private:
         int n;
         int m;
-        std::vector<int> secret_code;
+        std::vector<int> stored_code;
 
 };
-
-
-
-
-
 
 
 

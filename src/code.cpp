@@ -24,16 +24,17 @@ void Code::createSecretCode()
 
     for(int i = 0; i < m; i++)
     {
-        secret_code.push_back(rand() % (n + 1));
+        stored_code.push_back(rand() % (n + 1));
     }
 }
 
 
-int Code::checkCorrect() const
+int Code::checkCorrect(Code guess) const
 // Takes user guess and compares with secret_code, returns number of correct 
 // digits in correct location
 { 
     int correct = 0;
+    // guess.getCode(); compared with stored_code
 
     // algorithm implemention -> here
     
@@ -41,7 +42,7 @@ int Code::checkCorrect() const
 }
 
 
-int Code::checkIncorrect() const
+int Code::checkIncorrect(Code guess) const
 // Takes user guess and compares with secret_code, returns number of correct
 // digirts in incorrect location
 { 
@@ -52,19 +53,29 @@ int Code::checkIncorrect() const
     return semi_correct;
 }
 
-string Code::secretCode() const
+string Code::printCode() const
 // returns the secret code as a string for use in testing
 {
     string c = "";
-    for (int i : secret_code)
+    for (int i : stored_code)
     {
         c += to_string(i);
     }
     return c;
 }
 
+void Code::setCode(vector<int> new_code)
+// takes an int vector input and resets the stored_code data member
+{
+    stored_code = new_code;
+}
 
 
+vector<int> Code::getCode() const
+// returns the code stored in the object
+{
+    return stored_code;
+}
 
 
 
