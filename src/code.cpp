@@ -61,19 +61,42 @@ int Code::checkIncorrect(const Code& guess) const
     for (int i = 0; i < n; i++)
     {
 
-        for (int j = 0; j < n; j++)
+        if (guess_code[i] == secret_code[i])
         {
-            if(guess_code[i] == secret_code[j] && (i != j))
+            break;
+
+        } else
+        {
+            for (int j = 0; j < n; j++)
             {
-                secret_code[j] = -1;
-                semi_correct++;
+                if(guess_code[i] == secret_code[j] && (i != j))
+                {
+                    // special case
+                    if (guess_code[j] == secret_code[j]) { break; }
+
+                    guess_code[i] = -1;
+                    semi_correct++;
+                }
             }
+
         }
 
     }
 
     return semi_correct;
 }
+
+
+/*
+41122 -> secret
+
+52326 -> 1 0
+
+
+
+
+
+*/
 
 string Code::printCode() const
 // returns the secret code as a string for use in testing
