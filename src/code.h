@@ -20,15 +20,18 @@ class Code
         // class operations :
 
         void createSecretCode();
-        int checkCorrect(Code guess) const;
-        int checkIncorrect(Code guess) const;
+        int checkCorrect(const Code& guess) const;
+        int checkIncorrect(const Code& guess) const;
         std::string printCode() const;
+
+        // accessing data members :
+
         void setCode(std::vector<int> new_code);
         std::vector<int> getCode() const;
 
     private:
-        int n;
-        int m;
+        int n;  // length of code
+        int m;  // digits of code
         std::vector<int> stored_code;
 
 };

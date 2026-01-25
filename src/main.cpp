@@ -14,7 +14,7 @@ int main()
     vector<int> guess_3 = {1, 3, 3, 4, 5}; 
 
     // number of digits (n) and length (m) test case
-    int n = 10, m = 5;  
+    int n = 5, m = 10;  
     /*
     cout << "please enter max number possible and number of digits" << endl;
     cout << "Max number: ";

@@ -22,33 +22,55 @@ void Code::createSecretCode()
     //set seed for random number generator
     srand(time(0)); 
 
-    for(int i = 0; i < m; i++)
+    for(int i = 0; i < n; i++)
     {
         stored_code.push_back(rand() % (n + 1));
     }
 }
 
 
-int Code::checkCorrect(Code guess) const
+int Code::checkCorrect(const Code& guess) const
 // Takes user guess and compares with secret_code, returns number of correct 
 // digits in correct location
 { 
     int correct = 0;
-    // guess.getCode(); compared with stored_code
+    vector<int> guess_code = guess.getCode();
 
-    // algorithm implemention -> here
+    for (int i = 0; i < n; i++)
+    {
+
+        if (guess_code[i] == stored_code[i]) 
+        {
+            correct++;
+        }
+    }
     
     return correct;
 }
 
 
-int Code::checkIncorrect(Code guess) const
+int Code::checkIncorrect(const Code& guess) const
 // Takes user guess and compares with secret_code, returns number of correct
 // digirts in incorrect location
 { 
     int semi_correct = 0;
+    vector<int> guess_code = guess.getCode();
+    vector<int> secret_code = stored_code;
 
-    // algorithm implementation -> here
+
+    for (int i = 0; i < n; i++)
+    {
+
+        for (int j = 0; j < n; j++)
+        {
+            if(guess_code[i] == secret_code[j] && (i != j))
+            {
+                secret_code[j] = -1;
+                semi_correct++;
+            }
+        }
+
+    }
 
     return semi_correct;
 }
