@@ -10,12 +10,10 @@ using namespace std;
 
 
 Code::Code(int n, int m)
-// Constructor : inits all data members and runs createSecretCode to init the
-// secret code
+// Constructor : inits data members
 {
     this->n = n;
     this->m = m;
-    createSecretCode();
 }
 
 void Code::createSecretCode()
@@ -24,7 +22,7 @@ void Code::createSecretCode()
     //set seed for random number generator
     srand(time(0)); 
 
-    for(int i = 0; i < m - 1; i++)
+    for(int i = 0; i < m; i++)
     {
         secret_code.push_back(rand() % (n + 1));
     }
@@ -54,15 +52,15 @@ int Code::checkIncorrect() const
     return semi_correct;
 }
 
-void Code::secretCode() const
+string Code::secretCode() const
 // returns the secret code as a string for use in testing
 {
-    
+    string c = "";
     for (int i : secret_code)
     {
-        cout << i;
+        c += to_string(i);
     }
-    cout << endl;
+    return c;
 }
 
 

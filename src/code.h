@@ -10,6 +10,7 @@ Proiject #1 Mastermind, part a
 #define CODE_H
 
 #include <vector>
+#include <string>
 
 
 class Code
@@ -24,7 +25,7 @@ class Code
         void createSecretCode();
         int checkCorrect() const;
         int checkIncorrect() const;
-        void secretCode() const;
+        std::string secretCode() const;
 
         // public data members
         std::vector<int> user_guess;
