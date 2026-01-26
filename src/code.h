@@ -17,14 +17,14 @@ class Code
 
         Code(int n, int m);
 
-        // class operations :
+        // class functionality :
 
         void createSecretCode();
         int checkCorrect(const Code& guess) const;
         int checkIncorrect(const Code& guess) const;
         std::string printCode() const;
 
-        // accessing data members :
+        // access to data members :
 
         void setCode(std::vector<int> new_code);
         std::vector<int> getCode() const;
