@@ -1,5 +1,12 @@
-/* Header */
-
+/* ========================================================================= */
+// Project 1a ---------- 11-zogwidrouhua
+//
+//
+// Main program file for Project 1a. Contains Code class implementation for 
+// constructor, secret code creation, checkCorrect, checkIncorrect, and 
+// utility functions for accessing the stored code data member and 
+// printing.
+/* ========================================================================= */
 
 #include "code.h"
 #include <iostream>
@@ -14,7 +21,7 @@ Code::Code(int n, int m)
 {
     this->n = n;
     this->m = m;
-}
+} // end Code constructor
 
 
 void Code::createSecretCode()
@@ -26,11 +33,11 @@ void Code::createSecretCode()
     //set seed for random number generator
     srand(time(0)); 
 
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         stored_code.push_back(rand() % (n + 1));
     }
-}
+} // end createSecretCode
 
 
 int Code::checkCorrect(const Code& guess) const
@@ -50,7 +57,7 @@ int Code::checkCorrect(const Code& guess) const
     }
     
     return correct;
-}
+} // end checkCorrect
 
 
 int Code::checkIncorrect(const Code& guess) const
@@ -63,51 +70,57 @@ int Code::checkIncorrect(const Code& guess) const
 
     for (int i = 0; i < n; i++)   // iterate through GUESS
     {
+
         for (int j = 0; j < n; j++)     // iterate through SECRET
         {
-            if(guess_code[i] == secret_code[j] && (i != j))     // if semi_correct case is true
+            // if semi_correct case is true
+            if (guess_code[i] == secret_code[j] && (i != j))     
             {
+                // avoid double counting correct case 
+                if (guess_code[j] == secret_code[j]) { continue; }     
 
-                if (guess_code[j] == secret_code[j]) { continue; }     // avoid double counting correct case 
-
-                // remove the pair of values from the search (-1 is inaccessible)
+                // remove the pair of values from the search
                 guess_code[i] = -1;
                 secret_code[i] = -1;
 
                 semi_correct++;
-            }
-        }
+            } // endif
 
-     }
+        } // end of SECRET iteration
+
+    } // end of GUESS iteration
 
     return semi_correct;
-}
+} // end checkIncorrect
 
 
 string Code::printCode() const
 // utility function that returns the stored code as a string
 {
     string c = "";
+
     for (int i : stored_code)
     {
+        // ammend string with each number in stored code
         c += to_string(i);
     }
+
     return c;
-}
+} // end printCode
 
 
 void Code::setCode(vector<int> new_code)
 // takes an int vector input and resets the stored_code data member
 {
     stored_code = new_code;
-}
+} // end setCode
 
 
 vector<int> Code::getCode() const
 // returns stored code data member
 {
     return stored_code;
-}
+} // end getCode
 
 
 

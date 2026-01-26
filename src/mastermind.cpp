@@ -1,3 +1,6 @@
+// Project 1b ---------- 11-zogwidrouhua
+
+
 #include "mastermind.h"
 #include <iostream>
 #include <vector>
