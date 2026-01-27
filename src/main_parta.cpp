@@ -18,6 +18,7 @@ int main()
     vector<int> guess_1 = {5, 0, 3, 2, 6}; 
     vector<int> guess_2 = {2, 1, 2, 2, 2}; 
     vector<int> guess_3 = {1, 3, 3, 4, 5}; 
+    vector<int> test_code = {5, 0, 1, 4, 5};
 
     int n = 5, m = 10;              // n length, m digits
     
@@ -25,6 +26,8 @@ int main()
     code_maker.createSecretCode();
 
     Code code_breaker(n, m);        // init BREAKER
+
+    code_maker.setCode(test_code);
 
     // Begin testing
     cout << "=====  Welcome to Mastermind!  ======" << endl;

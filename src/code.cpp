@@ -40,6 +40,8 @@ void Code::createSecretCode()
 } // end createSecretCode
 
 
+
+
 int Code::checkCorrect(const Code& guess) const
 // Takes user guess and compares with secret_code, returns number of correct 
 // digits in correct location
@@ -70,14 +72,17 @@ int Code::checkIncorrect(const Code& guess) const
 
     for (int i = 0; i < n; i++)   // iterate through GUESS
     {
+        if (guess_code[i] == secret_code[i]) { continue; }
 
         for (int j = 0; j < n; j++)     // iterate through SECRET
         {
+            // avoid double counting correct case 
+            //if (guess_code[j] == secret_code[j]) { continue; }    
+
             // if semi_correct case is true
             if (guess_code[i] == secret_code[j] && (i != j))     
             {
-                // avoid double counting correct case 
-                if (guess_code[j] == secret_code[j]) { continue; }     
+ 
 
                 // remove the pair of values from the search
                 guess_code[i] = -1;
