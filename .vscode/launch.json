@@ -1,17 +1,29 @@
 {
   "version": "0.2.0",
   "configurations": [
+
     {
-      "name": "Debug Part A (gdb)",
+      "name": "Run (MacOS)",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}\\build\\mastermind.exe",
+      "program": "${workspaceFolder}/build/out",
       "args": [],
       "cwd": "${workspaceFolder}",
       "stopAtEntry": false,
       "externalConsole": false,
-      "MIMode": "gdb",
-      "preLaunchTask": "build (part a)"
+      "MIMode": "lldb",
+      "preLaunchTask": "build-mac"
+    },
+    {
+      "name" : "Run (Windows)",
+      "type" : "cppvsdbg",
+      "request" : "launch",
+      "program" : "${workspaceFolder}/build/out",
+      "cwd" : "${workspaceFolder}",
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "MImode" : "gdb",
+      "preLaunchTask": "build-windows"
     }
   ]
 }

@@ -2,18 +2,36 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build (part a)",
+      "label": "build-mac",
       "type": "shell",
       "command": "g++",
       "args": [
         "-std=c++17",
+        "-Wall",
+        "-Wextra",
         "-g",
-        "src\\code.cpp",
-        "src\\mastermind.cpp",
-        "src\\response.cpp",
-        "src\\main_parta.cpp",
+        "src/*.cpp",
         "-o",
-        "build\\mastermind.exe"
+        "build/out"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "build-windows",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-g",
+        "src/*.cpp",
+        "-o",
+        "build/out"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
