@@ -27,10 +27,6 @@ int main()
 
     Code code_breaker(n, m);        // init BREAKER
 
-    //use this if needed to test specific codes
-    //vector<int> test_code = {5, 2, 1, 4, 5}; 
-    //code_maker.setCode(test_code);
-
     // Begin testing
     cout << "=====  Welcome to Mastermind!  ======" << endl;
     cout << "-> Secret Code = " << code_maker.printCode() << endl;
@@ -52,7 +48,6 @@ int main()
     cout << "Guess 3 [1,3,3,4,5] returns : ";
     cout << "correct = " << code_maker.checkCorrect(code_breaker) << " ";
     cout << "| incorrect = " << code_maker.checkIncorrect(code_breaker) << endl;
-
     // end of testing
 
     return 0;

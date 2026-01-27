@@ -22,7 +22,7 @@
       "cwd" : "${workspaceFolder}",
       "stopAtEntry": false,
       "externalConsole": false,
-      "MImode" : "gdb",
+      "MIMode" : "gdb",
       "preLaunchTask": "build-windows"
     }
   ]

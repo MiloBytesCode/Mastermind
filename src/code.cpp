@@ -35,7 +35,7 @@ void Code::createSecretCode()
 
     for (int i = 0; i < n; i++)
     {
-        stored_code.push_back(rand() % (n + 1));
+        stored_code.push_back(rand() % m);
     }
 } // end createSecretCode
 
@@ -76,18 +76,15 @@ int Code::checkIncorrect(const Code& guess) const
 
         for (int j = 0; j < n; j++)     // iterate through SECRET
         {
-
             // if semi_correct case is true
             if (guess_code[i] == secret_code[j] && (i != j))     
             {
- 
-
-                // remove the pair of values from the search
-                guess_code[i] = -1;
-                secret_code[i] = -1;
+                // remove THIS SECRET value from search, don't use again
+                secret_code[j] = -1;
 
                 semi_correct++;
-            } // endif
+                break;  // stop checking THIS GUESS value, already matched
+            }
 
         } // end of SECRET iteration
 
