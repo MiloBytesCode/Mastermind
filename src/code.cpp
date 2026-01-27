@@ -76,8 +76,6 @@ int Code::checkIncorrect(const Code& guess) const
 
         for (int j = 0; j < n; j++)     // iterate through SECRET
         {
-            // avoid double counting correct case 
-            //if (guess_code[j] == secret_code[j]) { continue; }    
 
             // if semi_correct case is true
             if (guess_code[i] == secret_code[j] && (i != j))     
