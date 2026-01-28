@@ -72,10 +72,13 @@ int Code::checkIncorrect(const Code& guess) const
 
     for (int i = 0; i < n; i++)   // iterate through GUESS
     {
-        if (guess_code[i] == secret_code[i]) { continue; }
+        if (guess_code[i] == secret_code[i]) { 
+            secret_code[i] = -1;
+            continue; }
 
         for (int j = 0; j < n; j++)     // iterate through SECRET
         {
+
             // if semi_correct case is true
             if (guess_code[i] == secret_code[j] && (i != j))     
             {

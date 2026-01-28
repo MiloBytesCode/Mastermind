@@ -25,6 +25,9 @@ int main()
     Code code_maker(n, m);          // init MAKER
     code_maker.createSecretCode();
 
+    vector<int> test_code = {2, 5, 2, 2, 3};
+    code_maker.setCode(test_code);
+
     Code code_breaker(n, m);        // init BREAKER
 
     // Begin testing
