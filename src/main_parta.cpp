@@ -26,8 +26,8 @@ int main()
     code_maker.createSecretCode();
 
     //this code is for forcing a value to test, if needed
-    vector<int> test_code = {3, 6, 6, 3, 2};
-    code_maker.setCode(test_code);
+    //vector<int> test_code = {1, 1, 2, 3, 2};
+    //code_maker.setCode(test_code);
 
     Code code_breaker(n, m);        // init BREAKER
 
