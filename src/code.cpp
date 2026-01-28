@@ -72,21 +72,22 @@ int Code::checkIncorrect(const Code& guess) const
 
     for (int i = 0; i < n; i++)   // iterate through GUESS
     {
-        if (guess_code[i] == secret_code[i]) { 
-            continue; 
-        }
+        if (guess_code[i] == secret_code[i]) { continue; }
 
         for (int j = 0; j < n; j++)     // iterate through SECRET
         {
+            // if a match exists at this location
             if (guess_code[j] == secret_code[j]) { continue; }
+
             // if semi_correct case is true
             if (guess_code[i] == secret_code[j] && (i != j))     
             {
                 // remove THIS SECRET value from search, don't use again
                 secret_code[j] = -1;
-
                 semi_correct++;
-                break;  // stop checking THIS GUESS value, already matched
+
+                // stop checking THIS GUESS value, already matched
+                break;  
             }
 
         } // end of SECRET iteration
