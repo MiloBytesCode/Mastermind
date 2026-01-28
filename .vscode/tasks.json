@@ -23,13 +23,14 @@
     {
       "label": "build-windows",
       "type": "shell",
-      "command": "gcc",
+      "command": "g++",
       "args": [
         "-std=c++17",
         "-Wall",
         "-Wextra",
         "-g",
-        "src/*.cpp",
+        "src/code.cpp",
+        "src/main_parta.cpp",
         "-o",
         "build/out"
       ],
