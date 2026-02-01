@@ -4,7 +4,6 @@
 //
 /* ========================================================================= */
 
-
 #include "mastermind.h"
 #include <iostream>
 #include <vector>
@@ -37,7 +36,9 @@ Code Mastermind::humanGuess() const
     vector<int> guess_vec;
     int digit;
 
-    cout << "Enter " << n << " digits separated by spaces in between them(0 to " << m-1 << "): ";
+    cout << "Enter " << n;
+    cout << " digits separated by spaces in between them(0 to ";
+    cout << m-1 << "): ";
 
     for (int i = 0; i < n; i++)
     {
@@ -47,17 +48,17 @@ Code Mastermind::humanGuess() const
 
     Code guess(n, m);
     guess.setCode(guess_vec);
+
     return guess;
 }   
 
 Response Mastermind::getResponse(const Code& guess) const
 //function that is pass one code oject(the guess) and returns a Response object 
-
 {
     int reCorrect = secret.checkCorrect(guess);
     int reIncorrect = secret.checkIncorrect(guess);
+
     return Response (reCorrect, reIncorrect);
-    
 }
 
 bool Mastermind::isSolved(const Response& response) const
@@ -66,7 +67,6 @@ bool Mastermind::isSolved(const Response& response) const
 {
     return response.getCorrect() == n;
 }
-
 
 void Mastermind::playGame()
 // function that plays a game of mastermind :initializes a random secrete code,
