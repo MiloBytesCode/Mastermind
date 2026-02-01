@@ -1,7 +1,9 @@
 /* ========================================================================= */
 // Project 1a ---------- 11-zogwidrouhua
 //
-//
+// The implementation for the mastermind class. Contains the function
+// implementations that are responsible for playing a full game of Mastermind
+// against the computer.
 /* ========================================================================= */
 
 #include "mastermind.h"
@@ -11,13 +13,14 @@ using namespace std;
 
 
 Mastermind::Mastermind() : secret(5, 10)
-// Mastermind class constructor
+// Mastermind class constructor with default values
 {
-    n=5;
-    m=10;
+    this->n = 5;
+    this->m = 10;
 }
+
 Mastermind::Mastermind(int n, int m) : secret(n, m)
-// Mastermind class constructor
+// Mastermind class constructor with input values
 {
     this->n = n;
     this->m = m;
@@ -29,16 +32,16 @@ void Mastermind::printSecretCode() const
     cout << "Secret Code: " << secret.printCode() << endl;
 }
 
-Code Mastermind::humanGuess() const
+Code Mastermind::humanGuess() const // ~~~~~ NEEDS INPUT VALIDATION ~~~~~
 // function that reads a guess from the keyboard and returns it as a Code 
-// object(representing the guess)
+// object representing the guess
 {
     vector<int> guess_vec;
     int digit;
 
     cout << "Enter " << n;
-    cout << " digits separated by spaces in between them(0 to ";
-    cout << m-1 << "): ";
+    cout << " digits separated by spaces in between them using values 0 to ";
+    cout << m-1 << ": ";
 
     for (int i = 0; i < n; i++)
     {
@@ -53,7 +56,8 @@ Code Mastermind::humanGuess() const
 }   
 
 Response Mastermind::getResponse(const Code& guess) const
-//function that is pass one code oject(the guess) and returns a Response object 
+// function that is passed one code object (the guess) and returns a Response 
+// object 
 {
     int reCorrect = secret.checkCorrect(guess);
     int reIncorrect = secret.checkIncorrect(guess);
@@ -68,14 +72,15 @@ bool Mastermind::isSolved(const Response& response) const
     return response.getCorrect() == n;
 }
 
-void Mastermind::playGame()
+void Mastermind::playGame() // ~~~~~ NEEDS TO PRINT RESPONSE ~~~~~
 // function that plays a game of mastermind :initializes a random secrete code,
 // prints it to the screen, and then iteratively gets a guess from the player 
 // and prints the response until either the codemaker or the codebreaker has 
 // won.
 {
     secret.createSecretCode();
-    cout << "This is game Mastermind!" << endl;
+    cout << "~~~~~ Welcome to Mastermind! ~~~~~" << endl;
+    cout << "Secret Code -> ";
     printSecretCode();
 
     bool game_solved = false;
@@ -86,16 +91,20 @@ void Mastermind::playGame()
     {
         Code guess = humanGuess();
         Response response = getResponse(guess);
-        cout << "Response: " << response << endl;
+
+        cout << "Enter Guess: " << response << endl;
         current_attempt++;
         game_solved = isSolved(response);
     }
 
     if (game_solved)
     {
-        cout << "Congratulations! You solved the number in " << current_attempt << " guesses!" << endl;
+        cout << "Congratulations! You solved the number in ";
+        cout << current_attempt << " guesses!" << endl;
+
     } else 
     {
-        cout << "The codemaker wins. You did not solve the puzzle with 10 chances." << endl;
+        cout << "The codemaker wins. You did not ";
+        cout << "solve the puzzle with 10 chances." << endl;
     }
 }

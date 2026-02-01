@@ -1,7 +1,8 @@
 /* ========================================================================= */
 // Project 1a ---------- 11-zogwidrouhua
 //
-//
+// Header file for the response implementation. Declares the strucutre and 
+// members of the class. 
 /* ========================================================================= */
 
 #include <iostream>
@@ -28,4 +29,4 @@ class Response
 bool operator==(const Response& r1, const Response& r2);
 
 //an overloaded operator << that outputs the response
-ostream& operator<<(ostream& os, const Response& response);
+ostream& operator<<(ostream& ostr, const Response& response);

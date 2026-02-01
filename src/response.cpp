@@ -1,7 +1,8 @@
 /* ========================================================================= */
 // Project 1a ---------- 11-zogwidrouhua
 //
-//
+// The implementation for the response class, which stores a response to a
+// guess and has an overloaded == and << operator.
 /* ========================================================================= */
 
 
@@ -44,7 +45,7 @@ bool operator==(const Response& r1, const Response& r2)
 {
     bool cor = r1.getCorrect() == r2.getCorrect();
     bool inc = r1.getIncorrect() == r2.getIncorrect();
-    
+
     return (cor && inc);
 }
 

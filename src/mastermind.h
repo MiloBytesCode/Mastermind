@@ -1,12 +1,14 @@
 /* ========================================================================= */
 // Project 1a ---------- 11-zogwidrouhua
 //
-//
+// The header file for the mastermind implementation. Containes the class
+// declaration and the data members and functions that will be used to 
+// play the mastermind game.
 /* ========================================================================= */
-
 
 #include "code.h"
 #include "response.h"
+
 
 class Mastermind
 {
