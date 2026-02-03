@@ -33,7 +33,7 @@ void Mastermind::printSecretCode() const
     cout << "Secret Code: " << secret.printCode() << endl;
 }
 
-Code Mastermind::humanGuess() const // ~~~~~ NEEDS INPUT VALIDATION ~~~~~
+Code Mastermind::humanGuess() const 
 // function that reads a guess from the keyboard and returns it as a Code 
 // object representing the guess
 {
@@ -89,7 +89,7 @@ bool Mastermind::isSolved(const Response& response) const
     return response.getCorrect() == n;
 }
 
-void Mastermind::playGame() // ~~~~~ NEEDS TO PRINT RESPONSE ~~~~~
+void Mastermind::playGame()
 // function that plays a game of mastermind :initializes a random secrete code,
 // prints it to the screen, and then iteratively gets a guess from the player 
 // and prints the response until either the codemaker or the codebreaker has 

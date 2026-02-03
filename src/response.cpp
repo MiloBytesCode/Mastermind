@@ -11,7 +11,7 @@
 
 
 Response::Response(int cor, int incor)
-// response response response
+// response constructor
 {
     correct = cor;
     incorrect = incor;
