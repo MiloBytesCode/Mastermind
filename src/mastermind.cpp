@@ -84,15 +84,6 @@ void Mastermind::playGame() // ~~~~~ NEEDS TO PRINT RESPONSE ~~~~~
     cout << "Secret Code -> ";
     printSecretCode();
 
-    // from here
-    int n, m;
-
-    cout << "Enter code length you want to guess: ";
-    cin >> n;
-
-    cout << "Enter how many should the digit range be(digits are 0 to m-1): ";
-    cin >> m;
-
     // declare game loop variables
     bool game_solved = false;
     int current_attempt = 0;
