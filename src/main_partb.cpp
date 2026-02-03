@@ -20,6 +20,7 @@ int main() {
     cout << "Enter code length : ";
     cin >> n;
 
+    // test valid input for the code length
     while(cin.fail() || n < 1)
     {
         cout << "Invalid input. Please enter a postive integer for code length: ";
@@ -31,6 +32,7 @@ int main() {
     cout << "Enter digit range (0 to __): ";
     cin >> m;
 
+    // test valid input for digit range
     while(cin.fail() || m < 1 || m > 10)
     {
         cout << "Invalid input. Please enter a postive integer for digit range (1-10): ";

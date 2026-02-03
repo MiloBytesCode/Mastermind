@@ -75,6 +75,8 @@ Code Mastermind::humanGuess() const
 }   
 
 Response Mastermind::getResponse(const Code& guess) const
+// takes in a code object and returns the correct and incorrect
+// values within
 {
     int reCorrect = secret.checkCorrect(guess);
     int reIncorrect = secret.checkIncorrect(guess);
