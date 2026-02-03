@@ -22,10 +22,21 @@ int main() {
 
     while(cin.fail() || n < 1)
     {
-        cout << "Invalid input. Please enter an integer for code length: ";
+        cout << "Invalid input. Please enter a postive integer for code length: ";
         cin.clear();
         cin.ignore(10000, '\n');
         cin >> n;
+    }
+
+    cout << "Enter digit range (0 to __): ";
+    cin >> m;
+
+    while(cin.fail() || m < 1)
+    {
+        cout << "Invalid input. Please enter a postive integer for digit range: ";
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cin >> m;
     }
 
     Mastermind game(n, m);
