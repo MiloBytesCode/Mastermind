@@ -42,6 +42,7 @@ Code Mastermind::humanGuess() const // ~~~~~ NEEDS INPUT VALIDATION ~~~~~
 
     while (i != n)
     {   
+        cout << "Enter guess : ";
         cin >> digit;
         if (!(cin.fail()))
         {
