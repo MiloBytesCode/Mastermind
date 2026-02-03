@@ -18,11 +18,10 @@
       "name" : "Run (Windows)",
       "type" : "cppvsdbg",
       "request" : "launch",
-      "program" : "${workspaceFolder}/build/partb.exe",
+      "program" : "${workspaceFolder}/build/out.exe",
       "cwd" : "${workspaceFolder}",
       "stopAtEntry": false,
       "externalConsole": true,
-      "MIMode" : "gdb",
       "preLaunchTask": "build-windows"
     }
   ]
