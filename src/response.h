@@ -6,7 +6,7 @@
 /* ========================================================================= */
 
 #include <iostream>
-using namespace std;
+
 
 
 class Response
@@ -29,4 +29,4 @@ class Response
 bool operator==(const Response& r1, const Response& r2);
 
 //an overloaded operator << that outputs the response
-ostream& operator<<(ostream& ostr, const Response& response);
+std::ostream& operator<<(std::ostream& ostr, const Response& response);

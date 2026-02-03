@@ -50,8 +50,8 @@ bool operator==(const Response& r1, const Response& r2)
     return (cor && inc);
 }
 
-ostream& operator<<(ostream& ostr, const Response& response)
-// overload the << opeartor
+std::ostream& operator<<(std::ostream& ostr, const Response& response)
+// overload the << operator
 {
     ostr << "Correct: " << response.getCorrect();
     ostr << ", Incorrect: " << response.getIncorrect();
