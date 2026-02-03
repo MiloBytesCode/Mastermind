@@ -17,10 +17,10 @@ int main() {
 
     int n, m;
 
-    cout << "Enter code length you want to guess: ";
+    cout << "Enter code length : ";
     cin >> n;
 
-    cout << "Enter how many should the digit range be(digits are 0 to m-1): ";
+    cout << "Enter digit range (0 to __): ";
     cin >> m;
 
     Mastermind game(n, m);
