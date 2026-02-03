@@ -42,6 +42,7 @@ Code Mastermind::humanGuess() const // ~~~~~ NEEDS INPUT VALIDATION ~~~~~
 
     while (i != n)
     {   
+        cin >> digit;
         if (cin.fail())
         {
             cout << "Invalid input, try again" << endl;
