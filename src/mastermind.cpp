@@ -54,7 +54,7 @@ Code Mastermind::humanGuess() const // ~~~~~ NEEDS INPUT VALIDATION ~~~~~
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 continue;
             }
-            if (digit >= m) {
+            if (digit >= m || digit < 0) {
                 cout << "Enter numbers in range only" << endl;
 
                 cin.clear();
@@ -77,7 +77,6 @@ Response Mastermind::getResponse(const Code& guess) const
 // function that is passed one code object (the guess) and returns a Response 
 // object 
 {
-    guess;
     int reCorrect = secret.checkCorrect(guess);
     int reIncorrect = secret.checkIncorrect(guess);
 
