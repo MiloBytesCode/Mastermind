@@ -38,20 +38,27 @@ Code Mastermind::humanGuess() const // ~~~~~ NEEDS INPUT VALIDATION ~~~~~
 // object representing the guess
 {
     vector<int> guess_vec;
-    int digit, i = 0;
+    int digit, i = 0, sacrifice;
 
     while (i != n)
-    {   
-        cout << "Enter guess : ";
-        cin >> digit;
-        if (!(cin.fail()))
-        {
-            cout << "Invalid input, try again" << endl;
-        } else 
-        {
-            guess_vec.push_back(digit);
-            i = guess_vec.size();
-        }
+    {
+        while (true) {
+            if (!(cin >> digit)) {
+                cout << "Enter digits only" << endl;
+
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                continue;
+            }
+            if (digit >= m || digit < 0) {
+                cout << "Enter numbers in range only" << endl;
+
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                continue;
+            }
+        break;
+    }
     }
 
     Code guess(n, m);
@@ -61,8 +68,6 @@ Code Mastermind::humanGuess() const // ~~~~~ NEEDS INPUT VALIDATION ~~~~~
 }   
 
 Response Mastermind::getResponse(const Code& guess) const
-// function that is passed one code object (the guess) and returns a Response 
-// object 
 {
     int reCorrect = secret.checkCorrect(guess);
     int reIncorrect = secret.checkIncorrect(guess);
