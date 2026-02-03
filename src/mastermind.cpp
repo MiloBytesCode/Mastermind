@@ -38,33 +38,21 @@ Code Mastermind::humanGuess() const // ~~~~~ NEEDS INPUT VALIDATION ~~~~~
 // object representing the guess
 {
     vector<int> guess_vec;
-    int digit;
+    int digit, i = 0, sacrifice;
 
-    cout << "Enter " << n;
-    cout << " digits separated by spaces in between them using values 0 to ";
-    cout << m-1 << ": ";
-
-    for (int i = 0; i < n; i++)
+    while (i != n)
     {
-        while (true) {
-            if (!(cin >> digit)) {
-                cout << "Enter digits only" << endl;
-
-                cin.clear();
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                continue;
-            }
-            if (digit >= m) {
-                cout << "Enter numbers in range only" << endl;
-
-                cin.clear();
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                continue;
-            }
-        break;
-    }
+        cout << "Enter digit [" << n << "] : ";
+        cin >> digit;
         
-        guess_vec.push_back(digit);
+        if (cin.fail())
+        {
+            cout << "Invalid input, try again" << endl;
+        } else 
+        {
+            guess_vec.push_back(digit);
+            i = guess_vec.size();
+        }
     }
 
     Code guess(n, m);
