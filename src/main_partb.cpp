@@ -31,9 +31,9 @@ int main() {
     cout << "Enter digit range (0 to __): ";
     cin >> m;
 
-    while(cin.fail() || m < 1)
+    while(cin.fail() || m < 1 || m > 10)
     {
-        cout << "Invalid input. Please enter a postive integer for digit range: ";
+        cout << "Invalid input. Please enter a postive integer for digit range (1-10): ";
         cin.clear();
         cin.ignore(10000, '\n');
         cin >> m;
