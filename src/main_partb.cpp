@@ -19,7 +19,6 @@ int main() {
     cout << "Enter code length you want to guess: ";
     cin >> n;
 
-
     cout << "Enter how many should the digit range be(digits are 0 to m-1): ";
     cin >> m;
  

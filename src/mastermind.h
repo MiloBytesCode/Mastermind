@@ -6,6 +6,8 @@
 // play the mastermind game.
 /* ========================================================================= */
 
+#pragma once
+
 #include "code.h"
 #include "response.h"
 

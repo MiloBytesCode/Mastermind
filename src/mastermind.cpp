@@ -94,7 +94,6 @@ void Mastermind::playGame() // ~~~~~ NEEDS TO PRINT RESPONSE ~~~~~
         Code guess = humanGuess();
         Response response = getResponse(guess);
 
-        cout << "Enter Guess: " << response << endl;
         current_attempt++; // increment attempt count
         game_solved = isSolved(response);
     }

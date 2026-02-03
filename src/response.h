@@ -5,9 +5,9 @@
 // members functions and overloaded operators of the class. Stores the feedback for player inputs.
 /* ========================================================================= */
 
+#pragma once
+
 #include <iostream>
-
-
 
 class Response
 {
