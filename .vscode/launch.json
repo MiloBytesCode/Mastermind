@@ -20,9 +20,8 @@
       "request" : "launch",
       "program" : "${workspaceFolder}/build/partb.exe",
       "cwd" : "${workspaceFolder}",
-      "stopAtEntry": true,
-      "externalConsole": false,
-      "MIMode" : "gdb",
+      "stopAtEntry": false,
+      "externalConsole": true,
       "preLaunchTask": "build-windows"
     }
   ]
