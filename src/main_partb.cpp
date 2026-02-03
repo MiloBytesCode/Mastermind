@@ -20,8 +20,24 @@ int main() {
     cout << "Enter code length you want to guess: ";
     cin >> n;
 
+    while(cin.fail() || n < 1)
+    {
+        cout << "Invalid input. Please enter an integer for code length: ";
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cin >> n;
+    }
+
     cout << "Enter how many should the digit range be(digits are 0 to m-1): ";
     cin >> m;
+
+    while(cin.fail() || m < 1)
+    {
+        cout << "Invalid input. Please enter an integer for digit range: ";
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cin >> m;
+    }
 
     Mastermind game(n, m);
     game.playGame();
