@@ -29,7 +29,9 @@
         "-Wextra",
         "-g",
         "src/code.cpp",
-        "src/main_parta.cpp",
+        "src/main_partb.cpp",
+        "src/mastermind.cpp",
+        "src/response.cpp",
         "-o",
         "build/out"
       ],
