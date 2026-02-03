@@ -8,9 +8,6 @@
 // digit placements until the code is solved(win game), or no attempts are allowed anymore(lose game).
 /* ========================================================================= */
 
-
-/*
-
 #include "mastermind.h"
 #include <iostream>
 using namespace std;
@@ -31,5 +28,3 @@ int main() {
     game.playGame();
     return 0;
 }
-
-*/
