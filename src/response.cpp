@@ -54,7 +54,7 @@ std::ostream& operator<<(std::ostream& ostr, const Response& response)
 // overload the << operator
 {
     ostr << "Correct: " << response.getCorrect();
-    ostr << ", Incorrect: " << response.getIncorrect();
+    ostr << ", Incorrect: " << response.getIncorrect() << std::endl;
 
     return ostr;
 }

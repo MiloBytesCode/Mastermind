@@ -10,7 +10,7 @@
       "args": [],
       "cwd": "${workspaceFolder}",
       "stopAtEntry": false,
-      "externalConsole": false,
+      "externalConsole": true,
       "MIMode": "lldb",
       "preLaunchTask": "build-mac"
     },
@@ -20,7 +20,7 @@
       "request" : "launch",
       "program" : "${workspaceFolder}/build/partb.exe",
       "cwd" : "${workspaceFolder}",
-      "stopAtEntry": false,
+      "stopAtEntry": true,
       "externalConsole": false,
       "MIMode" : "gdb",
       "preLaunchTask": "build-windows"
