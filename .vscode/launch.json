@@ -18,7 +18,7 @@
       "name" : "Run (Windows)",
       "type" : "cppvsdbg",
       "request" : "launch",
-      "program" : "${workspaceFolder}/build/out",
+      "program" : "${workspaceFolder}/build/partb.exe",
       "cwd" : "${workspaceFolder}",
       "stopAtEntry": true,
       "externalConsole": false,
