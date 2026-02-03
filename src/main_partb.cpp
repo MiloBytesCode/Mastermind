@@ -22,7 +22,7 @@ int main() {
 
     while(cin.fail() || n < 1)
     {
-        cout << "Invalid input. Please enter an integer for code length: ";
+        cout << "Invalid input. Please enter a positive integer for code length: ";
         cin.clear();
         cin.ignore(10000, '\n');
         cin >> n;
@@ -33,7 +33,7 @@ int main() {
 
     while(cin.fail() || m < 1)
     {
-        cout << "Invalid input. Please enter an integer for digit range: ";
+        cout << "Invalid input. Please enter a positive integer for digit range: ";
         cin.clear();
         cin.ignore(10000, '\n');
         cin >> m;
