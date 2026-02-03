@@ -9,6 +9,7 @@
 #include "mastermind.h"
 #include <iostream>
 #include <vector>
+#include <limits>
 using namespace std;
 
 
@@ -64,6 +65,7 @@ Response Mastermind::getResponse(const Code& guess) const
 // function that is passed one code object (the guess) and returns a Response 
 // object 
 {
+    guess;
     int reCorrect = secret.checkCorrect(guess);
     int reIncorrect = secret.checkIncorrect(guess);
 
