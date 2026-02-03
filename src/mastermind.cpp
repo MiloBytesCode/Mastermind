@@ -1,9 +1,9 @@
 /* ========================================================================= */
-// Project 1a ---------- 11-zogwidrouhua
+// Project 1b ---------- 11-zogwidrouhua
 //
 // The implementation for the mastermind class. Contains the function
 // implementations that are responsible for playing a full game of Mastermind
-// against the computer.
+// against the computer(secret code generation, input handling, response operation, and game flow operation).
 /* ========================================================================= */
 
 #include "mastermind.h"
@@ -78,11 +78,13 @@ void Mastermind::playGame() // ~~~~~ NEEDS TO PRINT RESPONSE ~~~~~
 // and prints the response until either the codemaker or the codebreaker has 
 // won.
 {
+    // generate secret code and print welcome message
     secret.createSecretCode();
     cout << "~~~~~ Welcome to Mastermind! ~~~~~" << endl;
     cout << "Secret Code -> ";
     printSecretCode();
 
+    // declare game loop variables
     bool game_solved = false;
     int current_attempt = 0;
    
@@ -93,10 +95,11 @@ void Mastermind::playGame() // ~~~~~ NEEDS TO PRINT RESPONSE ~~~~~
         Response response = getResponse(guess);
 
         cout << "Enter Guess: " << response << endl;
-        current_attempt++;
+        current_attempt++; // increment attempt count
         game_solved = isSolved(response);
     }
-
+    
+    // print end game message according to win condition
     if (game_solved)
     {
         cout << "Congratulations! You solved the number in ";

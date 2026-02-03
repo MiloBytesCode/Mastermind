@@ -1,9 +1,11 @@
 /* ========================================================================= */
-// Project 1a ---------- 11-zogwidrouhua
+// Project 1b ---------- 11-zogwidrouhua
 //
-// Header file for Code class in Project 1a. Contains class declaration and 
-// function prototypes in addition to the private data members required for 
-// the class functionality.
+// Program runtime for Project 1b. Contains the main function that 
+// allows users to input length and digit range to play. It then starts
+// the Mastermind game where players tries to guess a 
+// randomized secret code. Players receives feedback on correct and incorrect 
+// digit placements until the code is solved(win game), or no attempts are allowed anymore(lose game).
 /* ========================================================================= */
 
 

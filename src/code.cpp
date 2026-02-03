@@ -1,8 +1,8 @@
 /* ========================================================================= */
-// Project 1a ---------- 11-zogwidrouhua
+// Project 1b ---------- 11-zogwidrouhua
 //
 //
-// Main program file for Project 1a. Contains Code class implementation for 
+// Main program file for Project 1b. Contains Code class implementation for 
 // constructor, secret code creation, checkCorrect, checkIncorrect, and 
 // utility functions for accessing the stored code data member and 
 // printing.

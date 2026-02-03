@@ -1,8 +1,9 @@
 /* ========================================================================= */
-// Project 1a ---------- 11-zogwidrouhua
+// Project 1b ---------- 11-zogwidrouhua
 //
 // The implementation for the response class, which stores a response to a
-// guess and has an overloaded == and << operator.
+// guess: num of digits that are correct in correct position & ones that are incorrect position
+// Includes overloaded == and << operator for response comparation and output for player.
 /* ========================================================================= */
 
 

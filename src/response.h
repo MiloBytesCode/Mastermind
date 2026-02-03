@@ -1,8 +1,8 @@
 /* ========================================================================= */
-// Project 1a ---------- 11-zogwidrouhua
+// Project 1b ---------- 11-zogwidrouhua
 //
 // Header file for the response implementation. Declares the strucutre and 
-// members of the class. 
+// members functions and overloaded operators of the class. Stores the feedback for player inputs.
 /* ========================================================================= */
 
 #include <iostream>

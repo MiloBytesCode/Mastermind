@@ -1,8 +1,8 @@
 /* ========================================================================= */
-// Project 1a ---------- 11-zogwidrouhua
+// Project 1b ---------- 11-zogwidrouhua
 //
 // The header file for the mastermind implementation. Containes the class
-// declaration and the data members and functions that will be used to 
+// declaration and the data members and functions prototypes that will be used to 
 // play the mastermind game.
 /* ========================================================================= */
 
